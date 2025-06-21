@@ -110,7 +110,7 @@ function FormUsers({ user }: FormUsersProps) {
     if (user) {
       if (user.id !== session?.user.id) setDisabled(true);
     }
-  }, [user]);
+  }, [user, session]);
   return (
     <Row className="justify-content-center">
       <Col xs={12} sm={10} md={8} lg={7}>
