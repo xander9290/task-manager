@@ -3,7 +3,7 @@ import Credentials from "next-auth/providers/credentials";
 import prisma from "./prisma";
 import bcrypt from "bcryptjs";
 
-export const authOptions: NextAuthConfig = {
+export const authOptions = {
   providers: [
     Credentials({
       credentials: {
@@ -85,7 +85,9 @@ export const authOptions: NextAuthConfig = {
       return session;
     },
   },
-};
+} satisfies NextAuthConfig;
 
 const { handlers, auth, signIn, signOut } = NextAuth(authOptions);
 export { handlers, auth, signIn, signOut };
+
+// export const { handlers } = NextAuth(authOptions);
