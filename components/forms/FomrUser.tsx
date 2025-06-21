@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
-import { Partner, User } from "@/libs/definitions";
+import { User } from "@/libs/definitions";
 import { formatDate } from "@/libs/helpers";
 import { signOut, useSession } from "next-auth/react";
 import {
